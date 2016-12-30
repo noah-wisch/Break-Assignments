@@ -1387,7 +1387,7 @@ header {
     color: #da291c;
     font-weight: bold;
     text-align: left;
-    margin-top: -10px; }
+    margin-top: 0px; }
     @media print, screen and (min-width: 40em) {
       header h1 {
         padding-right: 0.9375rem;
@@ -1406,7 +1406,6 @@ header {
     list-style: none;
     display: flex;
     justify-content: space-between;
-    margin-top: 0px;
     font-weight: bold; }
     @media print, screen and (min-width: 40em) {
       header .nav {
@@ -1417,17 +1416,75 @@ header {
     header .nav a {
       text-decoration: none;
       color: black; }
-    header .nav a:hover {
-      background-color: lightgray;
-      padding: 15px 20px; }
     header .nav #log {
       border: 1px solid lightgray;
       padding: 17.2px 20px; }
+    header .nav .fa-search {
+      font-size: 1.5em;
+      padding: 0 10px;
+      text-align: centerl; }
 
 .video {
-  border: 2px solid black;
+  max-width: 75rem;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
   background-color: black;
-  padding: 165px; }
+  padding: 95px; }
+  .video::before, .video::after {
+    display: table;
+    content: ' '; }
+  .video::after {
+    clear: both; }
+  .video h1 {
+    width: 33.33333%;
+    float: left;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+    color: white;
+    font-size: 3em;
+    margin: 0;
+    font-weight: bolder; }
+    @media print, screen and (min-width: 40em) {
+      .video h1 {
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem; } }
+    .video h1:last-child:not(:first-child) {
+      float: right; }
+  .video p {
+    width: 100%;
+    float: left;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+    color: white;
+    margin: 0; }
+    @media print, screen and (min-width: 40em) {
+      .video p {
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem; } }
+    .video p:last-child:not(:first-child) {
+      float: right; }
+  .video #author {
+    color: lightgray; }
+  .video .bold {
+    font-weight: bold; }
+  .video a {
+    width: 100%;
+    float: left;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+    text-decoration: none;
+    color: lightgray;
+    font-weight: bold;
+    font-size: .8em; }
+    @media print, screen and (min-width: 40em) {
+      .video a {
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem; } }
+    .video a:last-child:not(:first-child) {
+      float: right; }
+  .video a:hover {
+    color: white; }
 
 .description {
   max-width: 75rem;
@@ -1441,8 +1498,6 @@ header {
     clear: both; }
   .description p {
     color: lightgray; }
-  .description .bold {
-    font-weight: bold; }
   .description a {
     text-decoration: none;
     color: black; }
