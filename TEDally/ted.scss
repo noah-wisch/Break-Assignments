@@ -106,12 +106,77 @@ header {
     @include grid-row();
     max-width:75%;
 
-    p {
-        color:$Secondary-font;
+    #sum {
+        @include grid-column(6);
+    }
+    
+    #UPS {
+        @include grid-column(4);
     }
 
     a {
         text-decoration:none;
         color:black;
+    }
+
+    #notes {
+        color:$Secondary-font;
+        font-size:.8em;
+    }
+}
+
+.buttons {
+    @include grid-row();
+
+    button {
+        @include grid-column(2);
+        border:2px solid $Secondary-font;
+        //margin:-10px;
+        padding:5px;
+        border-radius:5px;
+    }
+}
+
+.author {
+    @include grid-row();
+    border-top:1px solid $Secondary-font;
+    border-bottom:1px solid $Secondary-font;
+    padding-top:10px;
+    
+    img {
+        @include grid-column(2);
+        height:127px;
+    }
+
+    h1 {
+        @include grid-column(9);
+        font-size:1em;
+        font-weight:lighter;
+    }
+
+    p {
+        @include grid-column(1);
+        color:$Secondary-font;
+     }
+
+    span {
+        color:black;
+        font-weight:bold;
+    }
+    a {
+        text-decoration:underline;
+    }
+}
+
+.tags {
+    @include grid-row();
+    border-bottom:1px solid $Secondary-font;
+    padding-bottom:10px;
+
+    button {
+        background-color:$Secondary-font;
+        border-radius:15px;
+        padding:5px;
+        font-weight:bold;
     }
 }
